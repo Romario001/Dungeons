@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    // id "com.github.johnrengelman.shadow" version "5.1.0"
+}
+
+group 'com.gazizov'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+//task fatJar(type: Jar) {
+//    manifest {
+//        attributes 'Implementation-Title': 'Gradle Jar File Example',
+//                'Implementation-Version': version,
+//                'Main-Class': 'DungeonsStart'
+//    }
+//    baseName = project.name
+//    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+//    with jar
+//}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.apache.poi:poi:4.1.0'
+    implementation 'org.apache.poi:poi-ooxml:4.1.0'
+    implementation 'org.apache.poi:poi-ooxml-schemas:4.1.0'
+    // classpath "com.github.jengelman.gradle.plugins:shadow:5.1.0"
+//    compile group: 'org.apache.poi', name: 'poi-examples', version: '4.1.0'
+//    compile group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '3.1.0'
+
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'DungeonsStart'
+        //attributes 'Class-Path': configurations.runtime.files.collect { "classes\$it.class" }.join(' ')
+    }
+
+}
+
