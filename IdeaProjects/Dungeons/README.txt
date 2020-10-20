@@ -3,4 +3,4 @@
 
 Максимальный уровень регулируется константой MAX_LEVEL в классе DungeonsStart (установлен в 10);
 
-For Git training
+For Git training tra ta ta 
